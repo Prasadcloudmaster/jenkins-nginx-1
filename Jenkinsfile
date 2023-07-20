@@ -3,7 +3,7 @@ pipeline {
     environment {
         VM_HOST = '35.180.126.88'
         VM_USERNAME = 'ubuntu'
-        NGINX_PATH = '/usr/share/nginx/html' // Change this to the path where your web server serves content
+        NGINX_PATH = '/var/www/html' // Change this to the path where your web server serves content
     }
     stages {
         stage('Checkout') {
