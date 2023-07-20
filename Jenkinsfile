@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        VM_HOST = '172.31.28.190'
+        VM_HOST = '35.180.126.88'
         VM_USERNAME = 'ubuntu'
         NGINX_PATH = '/usr/share/nginx/html' // Change this to the path where your web server serves content
     }
