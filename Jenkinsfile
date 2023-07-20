@@ -16,7 +16,7 @@ pipeline {
         stage('Deploy to VM') {
             steps {
                 // Copy the code to the virtual machine
-                sshagent(['ssh-cred']) {
+                sshagent(['private']) {
                     sh "scp -r * ${VM_USERNAME}@${VM_HOST}:${NGINX_PATH}/"
                 }
             }
@@ -25,7 +25,7 @@ pipeline {
         stage('Restart Nginx') {
             steps {
                 // Restart Nginx on the VM
-                sshagent(['ssh-cred']) {
+                sshagent(['private']) {
                     sh "ssh ${VM_USERNAME}@${VM_HOST} sudo systemctl restart nginx"
                 }
             }
