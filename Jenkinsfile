@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from Git
-                git branch: 'main', credentialsId: 'your_git_credential_id', url: 'your_git_repo_url'
+                git branch: 'main', url: 'https://github.com/rakesh-pise/jenkins-nginx.git'
             }
         }
 
